@@ -1,0 +1,55 @@
+.container {
+    position: relative;
+}
+
+.date {
+    font-size: 18px;
+    text-align: center;
+    margin: 4px auto;
+    width: 30px;
+    height: 30px;
+    background: #15718d;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #fff;
+    z-index: 999;
+    position: absolute;
+    left: calc(50% - 15px);
+    top: -18px;
+}
+
+.card {
+    width: 380px;
+    height: 220px;
+    background-size: cover !important;
+    background-position: center !important;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.overlay {
+    height: 150px;
+    background: linear-gradient(0deg, #00000080, #00000000);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.plataforms {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 8px;
+}
