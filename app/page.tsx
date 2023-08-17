@@ -1,6 +1,6 @@
 import React from "react";
 import GameCard from "@/components/GameCard";
-import {getNumberOfDaysInMonth, getTodayMonth, getDay } from "@/utils/DateUtils";
+import {getTodayMonth, getDay } from "@/utils/DateUtils";
 import style from './home.module.scss';
 
 const getGameList = async () =>  {
@@ -42,7 +42,7 @@ export default async function Home() {
       <main className={style.container}>
         <div className={style.header}>
           <h3>Game Calendar</h3>
-          <h1>Jogos de <strong>{getTodayMonth()}</strong>:</h1>
+          <h1>Lançamentos em <strong>{getTodayMonth()}</strong></h1>
         </div>
         <div className={style.grid}>
           {games.results.map((game: any) => (

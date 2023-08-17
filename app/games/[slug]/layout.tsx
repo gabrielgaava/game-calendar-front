@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import './global.css'
+import "@/app/global.css";
 
 export const metadata: Metadata = {
-  title: 'Game Calendar',
+  title: 'Game Calendar - Game',
   description: 'Created by Gabriel Gava',
 }
 

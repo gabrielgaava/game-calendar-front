@@ -6,16 +6,18 @@
     font-size: 18px;
     text-align: center;
     margin: 4px auto;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: #15718d;
     border-radius: 50%;
-    line-height: 30px;
+    line-height: 40px;
     color: #fff;
     z-index: 999;
     position: absolute;
-    left: calc(50% - 15px);
+    left: calc(50% - 20px);
     top: -18px;
+    font-weight: 600;
+    box-shadow: #0000002e 0px 6px 10px 1px;
 }
 
 .card {
@@ -53,3 +55,22 @@
     align-content: center;
     gap: 8px;
 }
+
+// Mobile
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        height: 230px;
+        margin: 0 auto 16px auto;
+    }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 94%;
+        height: 280px;
+        margin: 0 auto 20px auto;
+    }
+}
+
