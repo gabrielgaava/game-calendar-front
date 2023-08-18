@@ -2,6 +2,7 @@ import React from "react";
 import GameCard from "@/components/GameCard";
 import {getTodayMonth, getDay } from "@/utils/DateUtils";
 import style from './home.module.scss';
+import Footer from "@/components/Footer";
 
 const getGameList = async () =>  {
   const res = await fetch(
@@ -50,6 +51,7 @@ export default async function Home() {
           ))}
         </div>
       </main>
+      <Footer />
     </React.Fragment>
   )
 }

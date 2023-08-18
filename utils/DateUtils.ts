@@ -25,3 +25,9 @@ export const getDay = (date: string): string => {
     const day = mm.date();
     return day > 9 ? `${day}` : `0${day}`;
 }
+
+export const getTimeBetweenNowAndRelease = (relaseDate: any) => {
+    const mm = moment(relaseDate, "YYYY-MM-DD").locale(LOCALE);
+    console.log(mm.toDate())
+    return mm.toDate();
+}
