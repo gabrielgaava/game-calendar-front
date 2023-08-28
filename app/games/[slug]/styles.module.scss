@@ -35,6 +35,7 @@
     }
 
     .images {
+        max-width: 1300px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
@@ -43,12 +44,30 @@
     .flex {
         display: flex;
         justify-content: space-between;
-        margin-top: -100px;
         gap: 80px;
+        max-width: 1300px;
+        margin: -100px auto 0 auto;
+    }
+
+    .columnMetrics{
+        min-width: 400px;
+        background: #00000020;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 40px;
     }
 
     .metrics {
+        padding: 20px;
         text-align: center;
+
+        button {
+            width: 100%;
+            border: none;
+            background: var(--primaryColor);
+            padding: 10px 20px;
+            color: #fff;
+        }
     }
 }
 

@@ -7,7 +7,12 @@ export const getTodayMonth = () => {
     const mm = moment().locale(LOCALE);
     const month = mm.format('MMMM');
     
-    return month.charAt(0).toUpperCase() + month.slice(1);
+    const text = month.charAt(0).toUpperCase() + month.slice(1);
+    const value = Number(mm.format('MM'));
+    const next = value + 1 > 12 ? 1 : value + 1;
+    const previus = value - 1 < 1 ? 12 : value - 1;
+
+    return { text, value, next, previus };
 }
 
 export const formatedDate = (date: any) => {
@@ -31,3 +36,28 @@ export const getTimeBetweenNowAndRelease = (relaseDate: any) => {
     console.log(mm.toDate())
     return mm.toDate();
 }
+
+export const getMonthData = (month: any) => {
+    const today = moment().local();
+    const date = `${today.year()}-${month}-01}`
+
+    const mm = moment(date, "YYYY-MM-DD").locale(LOCALE);
+
+    const text = MONTHS[month - 1];
+    const value = Number(mm.format('MM'));
+    const next = value + 1 > 12 ? 1 : value + 1;
+    const previus = value - 1 < 1 ? 12 : value - 1;
+
+    return { text, value, next, previus };
+}
+
+export const getMonthRange = (month: any) => {
+    const formatedMonth = month < 10 ? "0" + month : month;
+    const today = moment().local();
+    const start = today.year() + "-" + formatedMonth + "-01";
+    const end = today.year() + "-" + formatedMonth + "-30";
+
+    return start + "," + end;
+}
+
+export const MONTHS = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];

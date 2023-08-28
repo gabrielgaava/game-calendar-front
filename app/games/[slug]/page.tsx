@@ -1,7 +1,5 @@
 import styles from "./styles.module.scss";
 import Footer from "@/components/Footer";
-import { getTimeBetweenNowAndRelease } from "@/utils/DateUtils";
-import Countdown from "react-countdown";
 const getGameData = async (slug: any) => {
     const res = await fetch(
         `https://game-calendar.netlify.app/games/${slug}`,
@@ -36,7 +34,6 @@ export default async function GameDetails({ params }: { params: { slug: string }
 
     const data = await getGameData(params.slug);
     const screenshots = await getGameScreenshots(params.slug);
-    const countdown = getTimeBetweenNowAndRelease(data.released);
 
     return (
         <>
@@ -54,10 +51,13 @@ export default async function GameDetails({ params }: { params: { slug: string }
                         </div>
                     </div>
 
-                    <div className={styles.metrics}>
-                        <p>Lançamento em: {data.released}</p>
-                        {data.metacritic && <p>Metacrict: {data.metacritic}</p>}
-                        {data.rating && <p>Rating: {data.rating}</p>}
+                    <div className={styles.columnMetrics}>
+                        <div className={styles.metrics}>
+                            <button>Adicionar ao Calendario</button>
+                            <p>Lançamento em: {data.released}</p>
+                            {data.metacritic && <p>Metacrict: {data.metacritic}</p>}
+                            {data.rating && <p>Rating: {data.rating}</p>}
+                        </div>
                     </div>
 
                 </div>

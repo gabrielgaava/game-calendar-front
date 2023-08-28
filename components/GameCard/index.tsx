@@ -16,7 +16,7 @@ export default function GameCard({ game }: any){
             <div className={styles.date}>
                 <span>{getDay(game.released)}</span>
             </div>
-            <Link href={`games/${game.slug}`}>
+            <Link href={`/games/${game.slug}`}>
                 <div className={styles.card} style={{background: "url(" + background + ")"}}>
                     <div className={styles.overlay}>
                         <h3 className={styles.title}>{game.name}</h3>

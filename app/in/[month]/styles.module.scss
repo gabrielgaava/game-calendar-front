@@ -37,6 +37,10 @@
     padding: 20px 0px;
 }
 
+.footerLinks {
+    display: none;
+}
+
 
 // Mobile
 @media (max-width: 480px) {
@@ -44,8 +48,30 @@
         padding: 26px;
         flex-direction: column;
     }
+
+    .headerLink { display: none };
+
+    .footerLinks {
+        padding: 0px 20px;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primaryColor);
+    }
 }
 
 // Tablet
 @media (min-width: 768px) and (max-width: 1024px) {
+    .headerLink { display: none };
+
+    .footerLinks {
+        padding: 0px 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primaryColor);
+    }
 }
